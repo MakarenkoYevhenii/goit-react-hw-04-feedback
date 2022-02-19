@@ -12,7 +12,6 @@ const initalState = {
 
 const Feedback = () => {
   const [state, setState] = useState({ ...initalState });
-  console.log(state);
   const setFeedback = property => {
     setState(prevState => {
       const value = prevState[property];
