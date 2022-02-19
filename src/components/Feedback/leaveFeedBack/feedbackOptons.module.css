@@ -1,0 +1,17 @@
+.heading{
+    color: pink;
+}
+.button{
+    border: 0px solid black;
+    background-color: blue;
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 20px;
+    color: black;
+}
+.buttonsList
+{
+    display: flex;
+}
