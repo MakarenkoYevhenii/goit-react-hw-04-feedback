@@ -1,6 +1,6 @@
 import styles from "./feedbackOptons.module.css"
 import PropTypes from 'prop-types'
-
+import { memo } from "react"
 
 const FeedbackOptions  = ({onLeaveFeedback,options})=>{
 
@@ -14,7 +14,7 @@ const FeedbackOptions  = ({onLeaveFeedback,options})=>{
   );}
   
 
-export default FeedbackOptions 
+export default memo(FeedbackOptions);
   
 function getColor() {
   let letters = '0123456789ABCDEF';
