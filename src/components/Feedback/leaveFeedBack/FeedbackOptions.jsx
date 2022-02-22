@@ -25,7 +25,6 @@ function getColor() {
   return color;
       }
 
-
       FeedbackOptions.defaultProps ={
         options:[]
       }

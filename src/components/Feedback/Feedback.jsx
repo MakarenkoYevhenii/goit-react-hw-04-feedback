@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import FeedbackOptions from '../Feedback/leaveFeedBack/FeedbackOptions';
 import Statistics from './statistics/Statistics';
 import Section from './Section/Section';
@@ -12,7 +12,7 @@ const initalState = {
 
 const Feedback = () => {
   const [state, setState] = useState({ ...initalState });
-  const setFeedback = property => {
+  const setFeedback =useCallback( property => {
     setState(prevState => {
       const value = prevState[property];
       return {
@@ -20,7 +20,7 @@ const Feedback = () => {
         [property]: value + 1,
       };
     });
-  };
+  },[setFeedback])
   const countTotalFeedback = () => {
     const value = state.Good + state.Neutral + state.Bad;
     return value;
