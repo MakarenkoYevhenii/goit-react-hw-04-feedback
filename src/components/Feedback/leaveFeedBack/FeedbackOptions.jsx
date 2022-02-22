@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { memo } from "react"
 
 const FeedbackOptions  = ({onLeaveFeedback,options})=>{
-
-  const elements = Object.keys(options).map(option => <li key={option}><button style={{ backgroundColor:getColor()}} className={styles.button}  onClick={()=>onLeaveFeedback(option)}>{option}</button></li>)
+  console.log("options");
+  const elements = Object.keys(options).map(option => <li key={option}><button className={styles.button}  onClick={()=>onLeaveFeedback(option)}>{option}</button></li>)
   return (
     <div>
     <ul className={styles.buttonsList}>

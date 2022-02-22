@@ -13,6 +13,7 @@ const initalState = {
 const Feedback = () => {
   const [state, setState] = useState({ ...initalState });
   const setFeedback =useCallback( property => {
+
     setState(prevState => {
       const value = prevState[property];
       return {
@@ -20,7 +21,7 @@ const Feedback = () => {
         [property]: value + 1,
       };
     });
-  },[setFeedback])
+  },[])
   const countTotalFeedback = () => {
     const value = state.Good + state.Neutral + state.Bad;
     return value;
@@ -35,10 +36,11 @@ const Feedback = () => {
     return persent;
   };
   const { Good, Neutral, Bad } = state;
+  const nameButton={Good, Neutral, Bad}
   return (
     <>
       <Section title="Оставьте ваш отзыв">
-        <FeedbackOptions onLeaveFeedback={setFeedback} options={state} />
+        <FeedbackOptions onLeaveFeedback={setFeedback} options={nameButton} />
       </Section>
       <Section title="Статистика">
         {countTotalFeedback() ? (
