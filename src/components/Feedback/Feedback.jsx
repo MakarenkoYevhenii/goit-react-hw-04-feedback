@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback,memo } from 'react';
 import FeedbackOptions from '../Feedback/leaveFeedBack/FeedbackOptions';
 import Statistics from './statistics/Statistics';
 import Section from './Section/Section';
@@ -59,4 +59,4 @@ const Feedback = () => {
   );
 };
 
-export default Feedback;
+export default memo(Feedback);
