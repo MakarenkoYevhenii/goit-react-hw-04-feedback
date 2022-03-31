@@ -9,6 +9,7 @@ const initalState = {
   Neutral: 0,
   Bad: 0,
 };
+const nameButton=["Good", "Neutral", "Bad"]
 
 const Feedback = () => {
   const [state, setState] = useState({ ...initalState });
@@ -36,7 +37,8 @@ const Feedback = () => {
     return persent;
   };
   const { Good, Neutral, Bad } = state;
-  const nameButton={Good, Neutral, Bad}
+ 
+ 
   return (
     <>
       <Section title="Оставьте ваш отзыв">
