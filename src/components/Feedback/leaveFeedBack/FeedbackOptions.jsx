@@ -30,9 +30,7 @@ function getColor() {
       }
   FeedbackOptions.propTypes ={
     onLeaveFeedback: PropTypes.func.isRequired,
-    options:PropTypes.arrayOf({
-      Good:PropTypes.string.isRequired,
-      Neutral:PropTypes.string.isRequired,
-      Bad:PropTypes.string.isRequired,
-    }).isRequired,
+    options:PropTypes.arrayOf(
+      PropTypes.string.isRequired,
+    ).isRequired,
 }
